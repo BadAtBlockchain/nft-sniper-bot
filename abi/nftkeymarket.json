@@ -1,0 +1,100 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "erc721Address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "buyToken",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "erc721Address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "expireTimestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "listToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "erc721Address",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expireTimestamp",
+						"type": "uint256"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct INFTKeyMarketplaceV2.Listing",
+				"name": "listing",
+				"type": "tuple"
+			}
+		],
+		"name": "TokenListed",
+		"type": "event"
+	}
+]
